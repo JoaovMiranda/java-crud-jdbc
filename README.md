@@ -36,8 +36,8 @@ CREATE TABLE usuario (
 ```  
   * A aplicação tem função de adcionar, editar, visualizar e deletar usuarios.  
   
-  ![Config](https://github.com/JoaovMiranda/java-crud-jdbc/imgs/mainview.png)  
+  ![Config](https://github.com/JoaovMiranda/java-crud-jdbc/blob/master/imgs/mainview.png)  
   
   * A busca filtra os clientes por sua classe social.  
   
-  ![Config](https://github.com/JoaovMiranda/java-crud-jdbc/imgs/detalhedview.png)
+  ![Config](https://github.com/JoaovMiranda/java-crud-jdbc/blob/master/imgs/detalhedview.png)

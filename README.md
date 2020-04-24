@@ -34,10 +34,30 @@ CREATE TABLE usuario (
     PRIMARY KEY (id)
 );
 ```  
+
+  * Os campos a serem salvos são:
+    * Nome - Nome do cliente;
+    * Idade - Data de nascimento do cliente (dd/MM/aaaa);  
+    * Genero - Genero sexual do cliente (M ou F);
+    * Email - Email do cliente (xxx@xxx.xxx);
+    * Tel - Telefone do cliente ((##) #####-####);
+    * Classe - Classe social do cliente (A,B,C ou D);  
+    * Estadocivil - Estado civil do cliente (S,C,V);  
+    * Profissao - Profissão do cliente;  
+    * Filhos - Se o cliente tem ou não filhos (S ou N);  
+    * Participacao - Se o cliente já participou de uma pesquisa de mercado (S ou N);  
+    * Tipo - Especifica a pesquisa **se** o cliente participou;  
+    * Rg - Registro geral do cliente (#.###-###);  
+    * Bairro - Bairro em que reside o cliente;  
+    * Cidade - Cidade em que reside o cliente;  
+    * Estado - Estado em que reside o cliente;  
+    * Rua - Rua em que reside o cliente;  
+    * Observacao - Algum detalhe sobre o cliente;  
+    
   * A aplicação tem função de adcionar, editar, visualizar e deletar usuarios.  
   
-  ![Config](https://github.com/JoaovMiranda/java-crud-jdbc/blob/master/imgs/mainview.png)  
+    ![Config](https://github.com/JoaovMiranda/java-crud-jdbc/blob/master/imgs/mainview.png)  
   
   * A busca filtra os clientes por sua classe social.  
   
-  ![Config](https://github.com/JoaovMiranda/java-crud-jdbc/blob/master/imgs/detalhedview.png)
+    ![Config](https://github.com/JoaovMiranda/java-crud-jdbc/blob/master/imgs/detalhedview.png)

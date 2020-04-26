@@ -6,7 +6,7 @@ package br.com.model;
  */
 public class User {
 
-    Long id;
+    Integer id;
     String nome;
     String idade;
     String genero;
@@ -24,12 +24,12 @@ public class User {
     String cidade;
     String estado;
     String rua;
-   
-    public Long getId() {
+
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -168,7 +168,8 @@ public class User {
     public void setRua(String rua) {
         this.rua = rua;
     }
-
+   
+    
     
 
 }

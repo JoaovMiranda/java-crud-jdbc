@@ -789,7 +789,8 @@ public class UserGUI extends javax.swing.JFrame {
                 usuario.setCidade(cidade.getText());
                 usuario.setEstado(estado.getText());
                 usuario.setRua(rua.getText());
-                usuario.setId((Long) jTable2.getValueAt(jTable2.getSelectedRow(), 0));
+                usuario.setId((Integer) jTable2.getValueAt(jTable2.getSelectedRow(), 0));
+//                usuario.setId((Long) jTable2.getValueAt(jTable2.getSelectedRow(), 0));
                 dao.update(usuario);
                 JOptionPane.showMessageDialog(null, "Usuário " + rg.getText() + "atualizado com sucesso! ");
             }
@@ -877,7 +878,7 @@ public class UserGUI extends javax.swing.JFrame {
     private void excluirActionPerformed(java.awt.event.ActionEvent evt) {
         UserDAO dao = new UserDAO();
         if (jTable2.getSelectedRow() != -1) {
-            usuario.setId((Long) jTable2.getValueAt(jTable2.getSelectedRow(), 0));
+            usuario.setId((Integer) jTable2.getValueAt(jTable2.getSelectedRow(), 0));
             dao.delete(usuario);
             JOptionPane.showMessageDialog(null, "Usuário " + rg.getText() + " excluido com sucesso! ");
             readTable();

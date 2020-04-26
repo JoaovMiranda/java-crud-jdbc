@@ -6,10 +6,7 @@ import java.sql.*;
 import java.sql.PreparedStatement;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.JOptionPane;
-import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -75,12 +72,12 @@ public class UserDAO {
             stmt.setString(17, usuario.getRua());
 
             stmt.executeUpdate();
-
         } catch (SQLException u) {
             JOptionPane.showMessageDialog(null, "Erro ao salvar" + u);
         } finally {
             ConnectionFactory.closeConnection(connection, stmt);
         }
+
     }
 
     // SELECT IN TABLE
@@ -95,7 +92,7 @@ public class UserDAO {
 
             while (rs.next()) {
                 User user = new User();
-                user.setId(rs.getLong("id"));
+                user.setId(rs.getInt("id"));
                 user.setNome(rs.getString("nome"));
                 user.setClasse(rs.getString("classe"));
                 user.setFilhos(rs.getString("filhos"));
@@ -166,7 +163,9 @@ public class UserDAO {
 
     // DELETE LINE IN TABLE
     public void delete(User usuario) {
+        
         stmt = null;
+        
         try {
             sql = "DELETE FROM usuario WHERE id = ?";
             stmt = connection.prepareStatement(sql);
@@ -182,20 +181,20 @@ public class UserDAO {
 
     // SELECT FOR SEARCH
     public List<User> readForSearch(String desc) {
-        
+
         stmt = null;
         rs = null;
         sql = "SELECT * FROM usuario WHERE classe LIKE ?;";
         List<User> users = new ArrayList<>();
-        
+
         try {
             stmt = connection.prepareStatement(sql);
-            stmt.setString(1, "%"+desc+"%");
+            stmt.setString(1, "%" + desc + "%");
             rs = stmt.executeQuery();
 
             while (rs.next()) {
                 User user = new User();
-                user.setId(rs.getLong("id"));
+                user.setId(rs.getInt("id"));
                 user.setNome(rs.getString("nome"));
                 user.setClasse(rs.getString("classe"));
                 user.setFilhos(rs.getString("filhos"));
@@ -210,8 +209,7 @@ public class UserDAO {
         }
         return users;
     }
-    
-    
+
     // ToDo: add a functional "create table" if doesn't exist a schema
 //    public void CREATE_TABLE() {
 //        String sql = "CREATE DATABASE cadastro;"

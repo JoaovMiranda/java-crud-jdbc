@@ -82,7 +82,7 @@ public class UserListDAO {
                 users.add(user);
             }
         } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(null, "Erro ao carregar tabela:" + ex);
+            JOptionPane.showMessageDialog(null, "Erro ao carregar tabela: " + ex);
         } finally {
             ConnectionFactory.closeConnection(connection, stmt, rs);
         }

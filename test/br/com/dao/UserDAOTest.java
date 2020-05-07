@@ -31,7 +31,7 @@ public class UserDAOTest {
         us.setNome("Batata");
         desc.add(us);
 
-        assertTrue(us.getNome() == null);
+        assertTrue("Batata".equals(us.getNome()));
 
     }
 
